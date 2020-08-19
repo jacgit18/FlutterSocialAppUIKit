@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:social_app_ui/components/post_item.dart';
 import 'package:social_app_ui/util/data.dart';
+import 'package:social_app_ui/services/auth.dart';
+
 
 class Home extends StatefulWidget {
   @override
@@ -8,6 +10,10 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+
+  final AuthService _auth = AuthService();
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -15,13 +21,15 @@ class _HomeState extends State<Home> {
         title: Text("Feeds"),
         centerTitle: true,
         actions: <Widget>[
-          IconButton(
-            icon: Icon(
-              Icons.filter_list,
-            ),
-            onPressed: () {},
+          FlatButton.icon(
+              icon: Icon(Icons.person),
+              label: Text('logout'),
+              onPressed: () async{
+                await _auth.signOut();
+              },
           ),
         ],
+
       ),
       body: ListView.builder(
         padding: EdgeInsets.symmetric(horizontal: 20),
