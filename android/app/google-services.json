@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "526797851428",
+    "firebase_url": "https://flutterweworkdb.firebaseio.com",
+    "project_id": "flutterweworkdb",
+    "storage_bucket": "flutterweworkdb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:526797851428:android:ce65f276bf21e53242c1b1",
+        "android_client_info": {
+          "package_name": "dev.jideguru.social_app_ui"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "526797851428-f7bs0nikmh8hii50rk78oqm1cc6tbjil.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSEm7_Ua11oHys0mg9C69BTXWOS6J8wXA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "526797851428-f7bs0nikmh8hii50rk78oqm1cc6tbjil.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
