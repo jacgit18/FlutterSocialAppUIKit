@@ -5,8 +5,10 @@ import 'package:social_app_ui/screens/main_screen.dart';
 import 'package:social_app_ui/util/const.dart';
 import 'package:social_app_ui/util/router.dart';
 import 'package:social_app_ui/util/validations.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class Register extends StatefulWidget {
+  final FirebaseAuth _auth = FirebaseAuth.instance;
   final String email;
 
   Register({@required this.email});
