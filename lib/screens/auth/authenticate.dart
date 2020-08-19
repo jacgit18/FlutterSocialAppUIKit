@@ -1,5 +1,6 @@
 import 'package:social_app_ui/screens/auth/sign_in.dart';
 import 'package:social_app_ui/screens/auth/login.dart';
+import 'package:social_app_ui/screens/auth/register.dart';
 
 import 'package:flutter/material.dart';
 
@@ -9,10 +10,19 @@ class Authenticate extends StatefulWidget {
 }
 
 class _AuthenticateState extends State<Authenticate> {
+
+  bool showSignIn = true;
+  void toggleView(){
+    //print(showSignIn.toString());
+    setState(() => showSignIn = !showSignIn);
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: SignIn(),
-    );
+    if (showSignIn) {
+      return SignIn(toggleView:  toggleView);
+    } else {
+      return Register(toggleView:  toggleView);
+    }
   }
 }
